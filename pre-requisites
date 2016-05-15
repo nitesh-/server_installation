@@ -1,0 +1,8 @@
+apt-get install vim
+apt-get install libgcrypt11-dev zlib1g-dev
+apt-get install libpcre3 libpcre3-dev
+apt-get install libtool
+apt-get install libssl-dev
+apt-get install libboost-all-dev
+apt-get install build-essential
+apt-get install libfcgi-dev libfcgi0ldbl libjpeg62-turbo-dbg libmcrypt-dev libssl-dev libc-client2007e libc-client2007e-dev libxml2-dev libbz2-dev libcurl4-openssl-dev libjpeg-dev libpng12-dev libfreetype6-dev libkrb5-dev libpq-dev libxml2-dev libxslt1-dev

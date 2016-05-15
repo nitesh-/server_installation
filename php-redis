@@ -1,0 +1,4 @@
+git clone -b php7 https://github.com/phpredis/phpredis.git
+phpize
+./configure
+sudo make && sudo make install

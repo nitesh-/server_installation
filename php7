@@ -1,0 +1,25 @@
+mkdir /opt/php7
+
+cd /usr/local/src/
+
+wget http://in1.php.net/distributions/php-7.0.6.tar.bz2
+
+tar -xjf php-7.0.6.tar.bz2
+
+cd php-7.0.6/
+
+./configure --prefix=/opt/php7 --with-pdo-pgsql --with-zlib-dir --with-freetype-dir --enable-mbstring --with-libxml-dir=/usr --enable-soap --enable-calendar --with-curl --with-mcrypt --with-zlib --with-gd --with-pgsql --disable-rpath --enable-inline-optimization --with-bz2 --with-zlib --enable-sockets --enable-sysvsem --enable-sysvshm --enable-pcntl --enable-mbregex --enable-exif --enable-bcmath --with-mhash --enable-zip --with-pcre-regex --with-pdo-mysql --with-mysqli --with-mysql-sock=/var/run/mysqld/mysqld.sock --with-jpeg-dir=/usr --with-png-dir=/usr --enable-gd-native-ttf --with-openssl --with-fpm-user=www-data --with-fpm-group=www-data --with-libdir=/lib/x86_64-linux-gnu --with-kerberos --with-gettext --with-xmlrpc --with-xsl --enable-opcache --enable-fpm
+
+make 
+
+make install
+
+cp php.ini-production /opt/php7/lib/php.ini
+
+cp /opt/php7/etc/php-fpm.conf.default /opt/php7/etc/php-fpm.conf
+
+cp /opt/php7/etc/php-fpm.d/www.conf.default /opt/php7/etc/php-fpm.d/www.conf
+
+Add php7-fpm in /etc/init.d/
+
+Add zend_extension=opcache.so in php.ini
